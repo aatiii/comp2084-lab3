@@ -13,7 +13,7 @@
     </div>
     <div class="form-group">
         <label for="EnrollmentDate" class="col-sm-3 control-label">Enrollment Date: </label>
-        <asp:TextBox ID="EnrollmentDate" runat="server" type="number" required min="0" max="99999999" step="1" />
+        <asp:TextBox ID="EnrollmentDate" runat="server" type="datetime-local" required />
     </div>
-    <asp:button class="btn btn-success col-sm-offset-3" id="btnSave" runat="server" Text="Save" />
+    <asp:button class="btn btn-success col-sm-offset-3" id="btnSave" runat="server" Text="Save" OnClick="btnSave_Click" />
 </asp:Content>
