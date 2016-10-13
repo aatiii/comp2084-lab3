@@ -7,38 +7,45 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace week6
-{
-
-
-    public partial class hello
-    {
-
+namespace week6 {
+    
+    
+    public partial class student_details {
+        
         /// <summary>
-        /// lblMessage control.
+        /// LastName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMessage;
-
+        protected global::System.Web.UI.WebControls.TextBox LastName;
+        
         /// <summary>
-        /// txtName control.
+        /// FirstMidName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtName;
-
+        protected global::System.Web.UI.WebControls.TextBox FirstMidName;
+        
         /// <summary>
-        /// btnSubmit control.
+        /// EnrollmentDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSubmit;
+        protected global::System.Web.UI.WebControls.TextBox EnrollmentDate;
+        
+        /// <summary>
+        /// btnSave control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSave;
     }
 }

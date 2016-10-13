@@ -7,56 +7,36 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace week6
-{
-
-
-    public partial class tip
-    {
-
+namespace week6 {
+    
+    
+    public partial class department_details {
+        
         /// <summary>
-        /// txtAmount control.
+        /// txtName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAmount;
-
+        protected global::System.Web.UI.WebControls.TextBox txtName;
+        
         /// <summary>
-        /// ddlPercent control.
+        /// txtBudget control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlPercent;
-
+        protected global::System.Web.UI.WebControls.TextBox txtBudget;
+        
         /// <summary>
-        /// btnCalculate control.
+        /// btnSave control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCalculate;
-
-        /// <summary>
-        /// lblTip control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTip;
-
-        /// <summary>
-        /// lblTotal control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTotal;
+        protected global::System.Web.UI.WebControls.Button btnSave;
     }
 }
