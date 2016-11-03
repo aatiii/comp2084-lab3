@@ -34,5 +34,39 @@ namespace week6
 
 
         }
+
+        protected void grdDepartments_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            // function to delete a department from gridview
+            // 1. determine which row in the grid the user clicked
+            Int32 gridIndex = e.RowIndex;
+
+            // 2. find the departmentID value in the selected row
+            Int32 DepartmentID = Convert.ToInt32(grdDepartments.DataKeys[gridIndex].Value);
+
+            // 3. connect to the db
+            var conn = new ContosoEntities();
+
+            // 4. delete the selected department
+            /* option1
+            var objDep = (from d in conn.Departments
+                            where d.DepartmentID == DepartmentID
+                            select d).First();
+
+            conn.Departments.Remove(objDep);
+            */
+            
+            Department d = new Department();
+            d.DepartmentID = DepartmentID;
+            conn.Departments.Attach(d);
+            conn.Departments.Remove(d);
+
+
+
+            conn.SaveChanges();
+
+            // 5. refresh the gridview
+            getDepartments();
+        }
     }
 }
