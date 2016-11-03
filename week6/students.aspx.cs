@@ -27,7 +27,25 @@ namespace week6
             grdStudents.DataSource = Students.ToList();
             grdStudents.DataBind();
 
+        }
 
+        protected void grdStudents_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            // determine the row that user clicked
+            Int32 gridIndex = e.RowIndex;
+            // find the selected student id
+            Int32 StudentID = Convert.ToInt32(grdStudents.DataKeys[gridIndex].Value);
+            // connect to db
+            var conn = new ContosoEntities();
+            // delete the selected row
+            Student s = new Student();
+            s.StudentID = StudentID;
+            conn.Students.Attach(s);
+            conn.Students.Remove(s);
+
+            conn.SaveChanges();
+            // refresh
+            getStudents();
         }
     }
 }
